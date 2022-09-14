@@ -12,7 +12,7 @@ namespace NguyenThiNhuQuynhBTH.Controllers
             new Employee { EmployeeID = 2, EmployeeName = "Hien", Age = 16 },
             new Employee { EmployeeID = 3, EmployeeName = "Ha", Age = 17 },
         };
-         ViewBag.SNV = StdList.Count();
+         ViewData["Employee"] = StdList;
             return View();
       }
       [HttpGet]
@@ -23,7 +23,7 @@ namespace NguyenThiNhuQuynhBTH.Controllers
     [HttpPost]
     public IActionResult Create(Employee std)
     {
-       ViewBag.thongtinNhanVien = std.EmployeeID+ "-" + std.EmployeeName+ "-" + std.Age;
+       //ViewBag.thongtinNhanVien = std.EmployeeID+ "-" + std.EmployeeName+ "-" + std.Age;
         return View();
     }
    }

@@ -17,17 +17,10 @@ namespace NguyenThiNhuQuynhBTH.Controllers
                 new Student{ StudentID=4, StudentName="Nguyen Van A", Age=18},
 
             };
-            ViewBag.DanhSachSV = StdList.Count();
-            return View();
+            ViewData["Student"] = StdList;
+            return View(StdList);
 
         }
-        [HttpPost]
-        public IActionResult Create(Student std)
-        {
-            ViewBag.sinhvien = std.StudentID + "-" + std.StudentName + "-" + std.Age;
-            return View();
-        }
-
     }
 
 }

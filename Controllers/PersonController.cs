@@ -12,7 +12,7 @@ namespace NguyenThiNhuQuynhBTH.Controllers
             new Person { Age = 15, Address = "DongDa", PhoneNumber = "0582303151" },
             new Person { Age = 16, Address = "HaNoi", PhoneNumber = "0986567341" },
         };
-         ViewBag.ThongtinSV = StdList.Count();
+         ViewData["Person"] = StdList;
             return View();
      }
      [HttpGet]
